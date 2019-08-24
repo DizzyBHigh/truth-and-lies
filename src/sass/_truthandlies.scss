@@ -1,0 +1,31 @@
+$primary: rgb(38, 17, 78);
+$secondary: rgb(77, 40, 145);
+$tertiary: rgb(220, 208, 243);
+$blackout1: rgb(17, 17, 17);
+$blackout2: rgb(41, 41, 41);
+$blackout3: rgb(221, 221, 221);
+$footerHeight: 30px;
+$font: 'Roboto Slab', serif;
+
+$font-1: 'Nanum Brush Script', cursive;
+$font-2: 'Nanum Pen Script', cursive;
+
+$font-4: 'Marck Script', cursive;
+$font-5: 'Caveat Brush', cursive;
+
+
+$fontLight: 300;
+$fontRegular: 400;
+$fontBold: 700;
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+
+  font-family: $font;
+}
+
+
+
+
