@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Truth and Lies</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- inject css -->
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+    <!-- BODY CONTENT STARTS HERE -->
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+        <a class="navbar-brand" href="/"><img class="bingo-logo" src="./img/bingo-logo.svg" alt="Bingo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav  ml-auto">
+                <li class="nav-item">
+                    <button type="button" class="btn btn-block btn-lg btn-success" id="load">Load</button>
+                </li>
+                <li class="nav-item">
+                    <button type="button" class="btn btn-block btn-lg btn-info" id="shuffle">Shuffle</button>
+                </li>
+
+                <li class="nav-item">
+                    <button type="button" class="btn btn-block btn-lg btn-secondary" id="showcalled">Show Called</button>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="modal" data-target="#newGameModal" href="">Settngs</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- First Container -->
+    <div class="container-full">
+        <!-- ALERT -->
+        <div id="addAlert"></div>
+        <div class="row">
+
+        </div>
+    </div>
+    <!-- NewGame Modal -->
+    <div class="modal fade" id="newGameModal" tabindex="-1" role="dialog" aria-labelledby="newGameModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content bg-dark">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="newGameModalLabel">New Game</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-link" data-dismiss="modal" aria-label="Close">Cancel</button>
+                    <button type="button" id="newgame" class="btn btn-call" data-dismiss="modal" ></button>
+                </div>
+            </div>
+        </div>
+    </div><footer>
+        <p><a href="http://facebook.com/AgataBarBerlin">Comedy Bingo Caller v1 &copy; Out The Box 2019</a></p>
+    </footer>
+    <!-- BODY CONTENT ENDS HERE -->
+        <!-- inject js -->
+        <script src="js/bundle.js"></script>
+    </body>
+</html>
