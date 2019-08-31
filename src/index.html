@@ -10,51 +10,131 @@
     </head>
     <body>
     <!-- BODY CONTENT STARTS HERE -->
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
-        <a class="navbar-brand" href="/"><img class="bingo-logo" src="./img/bingo-logo.svg" alt="Bingo"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav  ml-auto">
-                <li class="nav-item">
-                    <button type="button" class="btn btn-block btn-lg btn-success" id="load">Load</button>
-                </li>
-                <li class="nav-item">
-                    <button type="button" class="btn btn-block btn-lg btn-info" id="shuffle">Shuffle</button>
-                </li>
-
-                <li class="nav-item">
-                    <button type="button" class="btn btn-block btn-lg btn-secondary" id="showcalled">Show Called</button>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" data-toggle="modal" data-target="#newGameModal" href="">Settngs</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <!-- First Container -->
+   
     <div class="container-full">
         <!-- ALERT -->
         <div id="addAlert"></div>
-        <section id="t1-screen" class="slide active">
-            <div class="container">
-                ALL TEAM 1 INFO GOES HERE
+        <div class="row text-center">
+            <div id="team-one" class="col-12">
+                <h1 id="title">Truth and Lies</h1>
             </div>
-        </section>
-        <section id="game-screen" class="slide">
-            <div class="container">
-                ALL GAME INFO GOODNESS GOES HERE
+        </div>
+        <div class="row text-center">
+            <div class="col-2">
+                <div id="t1-p1" class="row">
+                    <div class="h3 card shadow text-info player">
+                        Fayzel
+                    </div>
+                </div>
+                <div id="t1-p2" class="row">
+                    <div class="h3 card shadow text-info player">
+                        Dizzy
+                    </div>
+                </div>
+                <div id="t1-p3" class="row">
+                    <div class="h3 card shadow text-info player">
+                        Janet
+                    </div>
+                </div>
             </div>
-        </section>
-        <section id="t2-screen" class="slide">
-            <div class="container">
-                ALL TEAM 2 Goodness goes here
+            <div class="col-8 text-center">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="h2 card border-info shadow text-info p-3 my-card active">
+                            Team One: <h1 class="t1-score">3</h1>
+                        </div>
+                    </div>
+                    <div class="col-4">  
+                        <div class="h2 card border-info shadow text-info p-3 my-card">
+                            Audience <h1 class="aud-score">2</h1>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="h3 card border-info shadow text-info p-3 my-card">
+                            Team Two: <h1 class="t1-score">3</h1>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section>
+            
+            
+            
+            
+            <div class="col-2">
+                <div id="t2-p1" class="row">
+                    <div class="h3 card shadow text-info player">
+                        Helen
+                    </div>
+                </div>
+                <div id="t2-p2" class="row">
+                    <div class="h3 card shadow text-info player">
+                        Cece
+                    </div>
+                </div>
+                <div id="t2-p3" class="row">
+                    <div class="h3 card shadow text-info player">
+                        Pavlo
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+            
+        <div class="playzone">
+            <div class="cols">
+                <div class="col" ontouchstart="this.classList.toggle('container container-hover');">
+                    <div class="container">
+                        <div class="front" style="background-image: url('assets/img/foot-view.jpg')">
+                            <div class="inner">
+                                <div class="a-side">
+                                    <i class="far fa-comment"></i> A
+                                </div>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="inner">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit
+                                    c.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" ontouchstart="this.classList.toggle('container container-hover');">
+                    <div class="container">
+                        <div class="front" style="background-image:url('assets/img/building-looking-up.jpg')">
+                            <div class="inner">
+                                <div class="a-side">
+                                    <i class="far fa-comment"></i> B
+                                </div>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="inner">
+                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit
+                                    c.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" ontouchstart="this.classList.toggle('container container-hover');">
+                    <div class="container">
+                        <div class="front" style="background-image: url('assets/img/trains.jpg')">
+                            <div class="inner">
+                                <div class="a-side">
+                                    <i class="far fa-comment"></i> C
+                                </div>
+                            </div>
+                        </div>
+                        <div class="back">
+                            <div class="inner">
+                                <p class="b-side">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit
+                                    c.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- NewGame Modal -->
     <div class="modal fade" id="newGameModal" tabindex="-1" role="dialog" aria-labelledby="newGameModalLabel"

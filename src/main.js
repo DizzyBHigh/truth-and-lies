@@ -104,24 +104,36 @@ $(document).ready(function () {
     }
   ];
 
-  let singleShuffle = function (slots) {
-    let m = slots.length;
-    // Pick a remaining element…
-    let i = Math.floor(Math.random() * m--);
-    let t = Math.floor(Math.random() * m--);
-    // And swap it with the current element.
-    let x = slots[i].ball; //store the current element
-    slots[i].ball = slots[t].ball;
-    slots[t].ball = x;
-  };
-
+  let gameScreen = '#game-screen';
+  let t1Screen = '#team1-screen';
+  let t2Screen = '#team2-screen';
   // Init The Game
   let initGame = function (gameData) {
     console.log('init');
+    $('#game-screen').show();
+    $('#team1-screen').hide();
+    $('#team2-screen').hide();
+
   };
 
   initGame();
 
+
+  var windowWidth = $(window).width();
+  var windowHeight = $(window).height();
+  var slideCount = $('.slide').length;
+
+  $('#game-screen').on('click', function () {
+    
+  });
+
+  $('button#team-one').on('click', function () {
+  
+
+  });
+  
+  $('button#team-two').on('click', function () {
+
+
+})
 });
-
-
