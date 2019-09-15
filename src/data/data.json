@@ -1,0 +1,159 @@
+{
+    "teams": [
+        {
+            "name": "Dizzys Team",
+            "players": [
+                {
+                    "name": "Dizzy High",
+                    "captain": true,
+                    "cards": [
+                        {
+                            "fact": "I Paid 2 90 year old ladies to go to a nightclub",
+                            "truth": true,
+                            "teamvote": false,
+                            "audvote": false
+                        },
+                        {
+                            "fact": "I once ate half a candle because I lost a bet",
+                            "truth": false,
+                            "teamvote": false,
+                            "audvote": false
+                        },
+                        {
+                            "fact": "I know how to make leather out of roadkill",
+                            "truth": false,
+                            "teamvote": false,
+                            "audvote": false
+                        }
+                    ]
+                },
+                {
+                    "name": "David Adams",
+                    "captain": false,
+                    "cards": [
+                        {
+                            "fact": "I once got lost in my uncles backyard and my family had to form a search party",
+                            "truth": false,
+                            "teamvote": false,
+                            "audvote": false
+                        },
+                        {
+                            "fact": "I was a contestant on a reality TV show",
+                            "truth": true,
+                            "teamvote": false,
+                            "audvote": false
+                        },
+                        {
+                            "fact": "My friends once managed to 100% convince me that I was going to die in 6 months",
+                            "truth": false,
+                            "teamvote": false,
+                            "audvote": false
+                        }
+                    ]
+                },
+                {
+                    "name": "Kashyap Swaroop",
+                    "color": "warning",
+                    "captain": false,
+                    "cards": [
+                        {
+                            "fact": "I was once nearly arrested for insulting the Thai royal family",
+                            "truth": false,
+                            "teamvote": false,
+                            "audvote": false
+                        },
+                        {
+                            "fact": "I once got into a brawl with a famous Bollywood actor",
+                            "truth": false,
+                            "teamvote": false,
+                            "audvote": false
+                        },
+                        {
+                            "fact": "I did Aziz Ansari a favour and he bought me paneer tika rolls at 2am",
+                            "truth": true,
+                            "teamvote": false,
+                            "audvote": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Ceces Team",
+            "players": [
+                {
+                    "name": "Cece Lederer",
+                    "captain": true,
+                    "cards": [
+                        {
+                            "fact": "I was escorted from a department store for having sex in the bathrooms",
+                            "truth": false,
+                            "teamvote": false,
+                            "audvote": false
+                        },
+                        {
+                            "fact": "James Spader has seen me cry",
+                            "truth": true,
+                            "teamvote": false,
+                            "audvote": false
+                        },
+                        {
+                            "fact": "I took part in an elaborate voodoo ritual which involved mixing blood and spit in a sacred bowl",
+                            "truth": false,
+                            "teamvote": false,
+                            "audvote": false
+                        }
+                    ]
+                },
+                {
+                    "name": "Deo Katunga",
+                    "captain": false,
+                    "cards": [
+                        {
+                            "fact": "I once passed out on stage during a school play",
+                            "truth": false,
+                            "teamvote": false,
+                            "audvote": false
+                        },
+                        {
+                            "fact": "I was once kidnapped and involved in a high speed chase for nearly an hour",
+                            "truth": true,
+                            "teamvote": false,
+                            "audvote": false
+                        },
+                        {
+                            "fact": "I have been bitten by a fox",
+                            "truth": false,
+                            "teamvote": false,
+                            "audvote": false
+                        }
+                    ]
+                },
+                {
+                    "name": "Justin Small",
+                    "captain": false,
+                    "cards": [
+                        {
+                            "fact": "I once nearly choked on an ice cube",
+                            "truth": true,
+                            "t-vote": false,
+                            "a-vote": false
+                        },
+                        {
+                            "fact": "I have been to four Scientology meetings",
+                            "truth": false,
+                            "teamvote": false,
+                            "audvote": false
+                        },
+                        {
+                            "fact": "I was fired as an extra for drinking coffee too flamboyantly",
+                            "truth": false,
+                            "teamvote": false,
+                            "audvote": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
