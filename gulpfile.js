@@ -207,7 +207,6 @@ gulp.task("delete-assets", () => {
 gulp.task("watch", function (done) {
     gulp.watch(sass_files, gulp.series("live-reload"));
     gulp.watch("./src/**/*.js", gulp.series("live-reload"));
-    gulp.watch("./src/data/*.json", gulp.series("live-reload"));
     gulp.watch("./src/*.js", gulp.series("live-reload"));
     gulp.watch(html_src).on(
         "change",
