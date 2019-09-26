@@ -79,7 +79,19 @@ $(document).ready(function () {
     })
   };
   //load in the data
-
+  loadData().then(data => {
+    teams = data.teams; // save teams
+    //loop teams
+    teams.forEach(function (team, tIndex) {
+      setTeamName(team, tIndex)
+      //loop players
+      team.players.forEach(function (player, pIndex) {
+        setPlayerName(tIndex, team, player, pIndex);
+      });
+    });
+  }).catch(error => {
+    console.log(error);
+  });
 
   let setTeamName = function(team, tIndex){
     console.log({ "value": team }, { "index": tIndex });
