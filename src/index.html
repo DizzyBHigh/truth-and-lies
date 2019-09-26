@@ -16,23 +16,23 @@
         <div id="addAlert"></div>
         <div class="row text-center">
             <div class="col-12">
-                <h1 id="title">Truth and Lies</h1>
+                <h1 id="game-header" class="load-lies">Truth and Lies</h1>
             </div>
         </div>
         <div class="row text-center">
-            <div class="col-2">
+            <div id="t0-players" class="col-2">
                 <div class="row">
-                    <div id="t1-p1" class="h3 card shadow player active">
+                    <div id="t0-p0" class="h2 card shadow player">
                         Fayzel
                     </div>
                 </div>
                 <div class="row">
-                    <div id="t1-p2" class="h3 card shadow player">
+                    <div id="t0-p1" class="h2 card shadow player">
                         Dizzy
                     </div>
                 </div>
                 <div class="row">
-                    <div id="t1-p3" class="h3 card shadow player">
+                    <div id="t0-p2" class="h2 card shadow player">
                         Janet
                     </div>
                 </div>
@@ -40,115 +40,152 @@
             <div class="col-8 text-center">
                 <div class="row">
                     <div class="col-4">
-                        <div class="team h2 card shadow my-card active">
-                            Team One: <h1 class="t1-score">3</h1>
+                        <div id="t0-name" class="team h2 card shadow">
+                            Team One: 
+                        </div>
+                        <div class="number">
+                            <span class="minus"><i class="fa-4x fas fa-minus-square"></i></span>
+                            <input id="t0-score" type="text" value="0" />
+                            <span class="plus"><i class="fa-4x fas fa-plus-square"></i></span>
                         </div>
                     </div>
                     <div class="col-4">  
-                        <div class="team h2 card shadow my-card">
-                            Audience <h1 class="aud-score">2</h1>
+                        <div id="aud-name" class="team h2 card shadow">
+                            Audience 
+                        </div>
+                        <div class="number">
+                            <span class="minus"><i class="fa-4x fas fa-minus-square"></i></span>
+                            <input id="aud-score" type="text" value="0" />
+                            <span class="plus"><i class="fa-4x fas fa-plus-square"></i></span>
+                        </div>
+                        <div id="current-player" class="team h1 card shadow">
+                            Current Player
                         </div>
                     </div>
                     <div class="col-4">
-                        <div class="team h3 card shadow my-card">
-                            Team Two: <h1 class="t1-score">3</h1>
+                        <div id="t1-name" class="team h2 card shadow">
+                            Team Two: 
+                        </div>
+                        <div class="number">
+                            <span class="minus"><i class="fa-4x fas fa-minus-square"></i></span>
+                            <input id="t1-score" type="text" value="0" />
+                            <span class="plus"><i class="fa-4x fas fa-plus-square"></i></span>
                         </div>
                     </div>
                 </div>
             </div>
-            
-            
-            
-            
-            <div class="col-2">
+           <div class="col-2">
                 <div class="row">
-                    <div id="t2-p1" class="h3 card shadow player">
+                    <div id="t1-p0" class="h2 card shadow player">
                         Helen
                     </div>
                 </div>
                 <div class="row">
-                    <div id="t2-p2" class="h3 card shadow player">
+                    <div id="t1-p1" class="h2 card shadow player">
                         Cece
                     </div>
                 </div>
                 <div class="row">
-                    <div id="t2-p3" class="h3 card shadow player">
+                    <div id="t1-p2" class="h2 card shadow player">
                         Pavlo
                     </div>
                 </div>
-            
             </div>
         </div>
-            
         <div class="playzone">
-            <div class="cols">
-                <div class="col">
-                    <div class="gc gamecard">
-                        <div class="front" style="background-image: url('assets/img/foot-view.jpg')">
-                            <div class="inner">
-                                <div class="a-side">
-                                    <i class="far fa-comment"></i> A
+            <div id="teamone-cards">
+                <div class="cols">
+                    <div class="col">
+                        <div class="gc gamecard">
+                            <div class="front" style="background-image: url('assets/img/foot-view.jpg')">
+                                <div class="inner">
+                                    <div class="a-side">
+                                        <i class="far fa-comment"></i> A
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="card-0" class="back c-bkg">
+                                <div class="inner">
+
                                 </div>
                             </div>
                         </div>
-                        <div class="back">
-                            <div class="inner">
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit
-                                    c.</p>
+                        <div class="card-controls text-center">
+                            <div id="tv-0" data-vote="0" class="t-btn btn btn-sq-lg">
+                                <i class="av-icon fa fa-user fa-6x"></i><br />
+                                <span class="tvote-text">Team</span>
+                            </div>
+                            <div id="av-0" data-vote="0" class="a-btn btn btn-sq-lg">
+                                <i class="tv-icon fa fa-users fa-6x"></i><br />
+                                <span class="avote-text">Audience</span>
                             </div>
                         </div>
                     </div>
-                    <div id="card-controls">
-                        Vote 1 Vote2
+
+
+
+                    <div class="col">
+                        <div class="gc gamecard">
+                            <div class="front" style="background-image:url('assets/img/building-looking-up.jpg')">
+                                <div class="inner">
+                                    <div class="a-side">
+                                        <i class="far fa-comment"></i> B
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="card-1" class="back c-bkg">
+                                <div class="inner">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-controls text-center">
+                            <div id="tv-1" data-vote="1" class="t-btn btn btn-sq-lg">
+                                <i class="tv-icon fa fa-user fa-5x"></i><br />
+                                <span class="tvote-text">Team</span>
+                            </div>
+                            <div id="av-1"  data-vote="1" class="a-btn btn btn-sq-lg">
+                                <i class="av-icon fa fa-users fa-5x"></i><br />
+                                <span class="avote-text">Audience</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="gc gamecard">
+                            <div class="front" style="background-image: url('assets/img/trains.jpg')">
+                                <div class="inner">
+                                    <div class="a-side">
+                                        <i class="far fa-comment"></i> C
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="card-2" class="back c-bkg">
+                                <div  class="inner">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-controls text-center">
+                            <div id="tv-2" data-vote="2" class="t-btn btn btn-sq-lg">
+                                <i class="tv-icon fa fa-user fa-5x"></i><br />
+                                <span class="tvote-text">Team</span>
+                            </div>
+                            <div id="av-2" data-vote="2" class="a-btn btn btn-sq-lg">
+                                <i class="av-icon fa fa-users fa-5x"></i><br />
+                                <span class="avote-text">Audience</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col"">
-                    <div class="gc gamecard">
-                        <div class="front" style="background-image:url('assets/img/building-looking-up.jpg')">
-                            <div class="inner">
-                                <div class="a-side">
-                                    <i class="far fa-comment"></i> B
-                                </div>
-                            </div>
-                        </div>
-                        <div class="back">
-                            <div class="inner">
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit
-                                    c.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="card-controls">
-                        Vote 1 Vote2
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="gc gamecard">
-                        <div class="front" style="background-image: url('assets/img/trains.jpg')">
-                            <div class="inner">
-                                <div class="a-side">
-                                    <i class="far fa-comment"></i> C
-                                </div>
-                            </div>
-                        </div>
-                        <div class="back">
-                            <div class="inner">
-                                <p class="b-side">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias cum repellat velit quae suscipit
-                                    c.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="card-controls">
-                        Vote 1 Vote2
+                <div class="row">
+                    <div class="col-4 offset-4">
+                        <div id="reveal" class="btn btn-success">REVEAL</div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-4 offset-4">
-                    <div id="reveal" class="btn btn-success">REVEAL</div>
-                </div>
-            </div>
+
         </div>
+
     </div>
     <!-- NewGame Modal -->
     <div class="modal fade" id="newGameModal" tabindex="-1" role="dialog" aria-labelledby="newGameModalLabel"
