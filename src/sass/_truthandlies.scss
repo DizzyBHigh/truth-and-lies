@@ -19,13 +19,19 @@ $fontLight: 300;
 $fontRegular: 400;
 $fontBold: 700;
 body, html {
-cursor:url('assets/img/hand-cursor.png'), default;
+cursor:url('/assets/img/hand-cursor.png'), default;
   position: relative;
   font-family: $font;
-  background-color: goldenrod;
+  background-color: #ffd500;
   margin: 10px;
 }
-
+.header-row{
+  background-image: url("/assets/img/tl-gh.png");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  height:150px;
+  background-position-x: 50%;
+}
 #game-header{
   height: 30%;
   margin:10px;
@@ -140,7 +146,7 @@ cursor:url('assets/img/hand-cursor.png'), default;
       height: 100%;
       content: '';
       display: block;
-      opacity: .6;
+      opacity: .2;
       background-color: #000;
       -webkit-backface-visibility: hidden;
               backface-visibility: hidden;
@@ -262,14 +268,14 @@ cursor:url('assets/img/hand-cursor.png'), default;
 
 
 .true{
-  // border-width: 15px;
-  // border-color: lightgreen;
+  border-width: 5px;
+  border-color: #35ee15;
   // border-style: groove;
   background-color: lightgreen;
 }
 .false{
-  //border-width: 15px;
-  // border-color: red;
+  border-width: 5px;
+  border-color: #ff4f26;
   // border-style: groove;
   background-color: pink;
 }

@@ -93,6 +93,7 @@ $(document).ready(function () {
     console.log(error);
   });
 
+
   let setTeamName = function(team, tIndex){
     console.log({ "value": team }, { "index": tIndex });
     $('#t' + tIndex + '-name').html(team.name);
@@ -117,7 +118,7 @@ $(document).ready(function () {
         $('#card-'+index +' .inner').html(card.fact);
     });
   };
-  $('#reveal').click(function(){
+  $('.header-row').click(function(){
     $('.gc').addClass('gamecard-hover');
   });
 
