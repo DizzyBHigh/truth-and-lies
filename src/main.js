@@ -100,6 +100,8 @@ $(document).ready(function () {
   };
   let setPlayerName = function(tIndex, team, player, pIndex){
     console.log(player.name, pIndex);
+    let newPlayer = '<div class="row"><div id="t'+tIndex+'-p'+pIndex+'" class="h2 card shadow player"></div></div>';
+    $('#t'+tIndex+'-players').append(newPlayer);
     $('#t' + tIndex + '-p' + pIndex).html(player.name)
         .data("player", player)// sets player data; //sets Name on button
         .data("cards", player.cards) // sets card data
@@ -122,7 +124,7 @@ $(document).ready(function () {
     $('.gc').addClass('gamecard-hover');
   });
 
-  $('.player').click(function () {
+  $('#game-details').on('click', '.player', function(){
     //hide cards
     $('.gc').removeClass('gamecard-hover');
     $('.a-btn, .t-btn').removeClass('true false');
