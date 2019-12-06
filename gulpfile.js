@@ -148,7 +148,6 @@ gulp.task("optimise-img", () => {
         )
         .pipe(gulp.dest(assets + "/img"));
 });
-
 // html files build
 gulp.task(
     "build-html",
@@ -157,6 +156,7 @@ gulp.task(
         done();
     })
 );
+
 // sound files build
 gulp.task(
     "build-sound",

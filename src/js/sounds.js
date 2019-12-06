@@ -51,6 +51,14 @@ let sounds = {
         src: ['assets/sounds/Door Buzzer-SoundBible.com-1567875395.mp3'],
         volume: 1.0,
     }),
+    'intromusic': new Howl({
+        src: ['assets/sounds/intromusic.mp3'],
+        volume: 1.0,
+    }),
+    'beatle': new Howl({
+        src: ['assets/sounds/a-hard-days-night-short.mp3'],
+        volume: 1.0,
+    }),
     'play': function(sound = 'smsBeep'){
         console.log("Playing: "+sound);
         sounds[sound].play();
@@ -58,7 +66,7 @@ let sounds = {
     'playSprite': function(sound = 'bell', sprite = 'bell'){
         console.log("Playing Sprite: "+sound+' - '+sprite);
         sounds[sound].play(sprite);
-    }
+    },
 };
 
 

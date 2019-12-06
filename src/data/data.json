@@ -1,152 +1,111 @@
 {
     "teams": [
         {
-            "name": "Dizzys Team",
+            "name": "Team One",
             "players": [
                 {
-                    "name": "Dizzy High",
+                    "name": "Dayne Brasher",
                     "captain": true,
                     "cards": [
+
                         {
-                            "fact": "I Paid 2 90 year old ladies to go to a nightclub",
+                            "fact": "I ruined a family holiday because I smuggled an animal with me",
+                            "truth": false,
+                            "teamvote": false,
+                            "audvote": false
+                        },
+                        {
+                            "fact": "A famous musician wrote a song about my mother after meeting her in a bar.",
+                            "truth": false,
+                            "teamvote": false,
+                            "audvote": false
+                        },
+                        {
+                            "fact": "A bird has shat on my sandwich 3 times.",
                             "truth": true,
                             "teamvote": false,
-                            "audvote": false
-                        },
-                        {
-                            "fact": "I once ate half a candle because I lost a bet",
-                            "truth": false,
-                            "teamvote": false,
-                            "audvote": false
-                        },
-                        {
-                            "fact": "I know how to make leather out of roadkill",
-                            "truth": false,
-                            "teamvote": false,
-                            "audvote": false
+                            "audvote": false,
+                            "aimage": "assets/img/bird-poo.jpg",
+                            "aaudio": "seagull.mp3"
                         }
                     ]
                 },
                 {
-                    "name": "David Adams",
+                    "name": "Gino Christofaro",
                     "captain": false,
                     "cards": [
                         {
-                            "fact": "I once got lost in my uncles backyard and my family had to form a search party",
+                            "fact": "I have a scam that has made me over $2,000 since i started using it",
                             "truth": false,
                             "teamvote": false,
                             "audvote": false
-                        },
-                        {
-                            "fact": "I was a contestant on a reality TV show",
+                        },{
+                            "fact": "I once stole a mobility scooter off a disabled girl",
                             "truth": true,
                             "teamvote": false,
-                            "audvote": false
+                            "audvote": false,
+                            "aimage": "assets/img/mobillity.png"
                         },
                         {
-                            "fact": "My friends once managed to 100% convince me that I was going to die in 6 months",
+                            "fact": "I am banned from 48 different casino's",
                             "truth": false,
                             "teamvote": false,
                             "audvote": false
                         }
-                    ]
-                },
-                {
-                    "name": "Kashyap Swaroop",
-                    "color": "warning",
-                    "captain": false,
-                    "cards": [
-                        {
-                            "fact": "I was once nearly arrested for insulting the Thai royal family",
-                            "truth": false,
-                            "teamvote": false,
-                            "audvote": false
-                        },
-                        {
-                            "fact": "I once got into a brawl with a famous Bollywood actor",
-                            "truth": false,
-                            "teamvote": false,
-                            "audvote": false
-                        },
-                        {
-                            "fact": "I did Aziz Ansari a favour and he bought me paneer tika rolls at 2am",
-                            "truth": true,
-                            "teamvote": false,
-                            "audvote": false
-                        }
+
                     ]
                 }
             ]
         },
         {
-            "name": "Ceces Team",
+            "name": "Team Two",
             "players": [
                 {
-                    "name": "Cece Lederer",
+                    "name": "Scott Reynolds",
+                    "color": "warning",
                     "captain": true,
                     "cards": [
                         {
-                            "fact": "I was escorted from a department store for having sex in the bathrooms",
+                            "fact": "When i was little, growing up, I wanted to be a __________",
                             "truth": false,
                             "teamvote": false,
                             "audvote": false
                         },
                         {
-                            "fact": "James Spader has seen me cry",
+                            "fact": "I got lost and couldn't get home for __________ days",
+                            "truth": false,
+                            "teamvote": false,
+                            "audvote": false
+                        },
+                        {
+                            "fact": "I auditioned to be the __________ in a Beatles cover band",
                             "truth": true,
                             "teamvote": false,
-                            "audvote": false
-                        },
-                        {
-                            "fact": "I took part in an elaborate voodoo ritual which involved mixing blood and spit in a sacred bowl",
-                            "truth": false,
-                            "teamvote": false,
-                            "audvote": false
+                            "audvote": false,
+                            "aaudio" : "a-hard-days-night-short.mp3",
+                            "aimage": "assets/img/john-lennon-1.jpg"
                         }
                     ]
                 },
                 {
-                    "name": "Deo Katunga",
+                    "name": "Tera Kilbride",
                     "captain": false,
                     "cards": [
                         {
-                            "fact": "I once passed out on stage during a school play",
+                            "fact": "Two of my family had to go to hospital after a thanksgiving dinner I organised",
                             "truth": false,
                             "teamvote": false,
                             "audvote": false
                         },
                         {
-                            "fact": "I was once kidnapped and involved in a high speed chase for nearly an hour",
+                            "fact": "I used to dress up as a GingerBread man",
                             "truth": true,
                             "teamvote": false,
-                            "audvote": false
+                            "audvote": false,
+                            "aimage": "assets/img/gingerbread-man-running-clipart.png"
                         },
                         {
-                            "fact": "I have been bitten by a fox",
-                            "truth": false,
-                            "teamvote": false,
-                            "audvote": false
-                        }
-                    ]
-                },
-                {
-                    "name": "Justin Small",
-                    "captain": false,
-                    "cards": [
-                        {
-                            "fact": "I once nearly choked on an ice cube",
-                            "truth": true,
-                            "t-vote": false,
-                            "a-vote": false
-                        },
-                        {
-                            "fact": "I have been to four Scientology meetings",
-                            "truth": false,
-                            "teamvote": false,
-                            "audvote": false
-                        },
-                        {
-                            "fact": "I was fired as an extra for drinking coffee too flamboyantly",
+                            "fact": "I have a secret obsession with RollerCoasters",
                             "truth": false,
                             "teamvote": false,
                             "audvote": false
