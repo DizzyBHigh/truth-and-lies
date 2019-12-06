@@ -1,11 +1,21 @@
 $(document).ready(function () {
-
-
   let teams = [];
   let cCards = [];
   let cPlayer =[];
   let cTeam = [];
-
+  let paperCount = 11;
+  let currentPaper = -1;
+  let howl;
+  let soundActive = false;
+  let showSection = true;
+  let getPaper = function(){
+    currentPaper ++;
+    if (currentPaper >= paperCount){
+      currentPaper = 0;
+    }
+    console.log('assets/img/paper-'+currentPaper+'.jpg');
+    return('assets/img/paper-'+currentPaper+'.jpg');
+  };
   $.fn.equalHeights = function(){
     var max_height = 0;
     $(this).each(function(){
@@ -24,6 +34,7 @@ $(document).ready(function () {
       // Store the object
       var $this = $(this);
 
+
       var resizer = function () {
         string = $this;
         string.html('<span style="white-space: nowrap;">' + string.html() + '</span>');
@@ -32,7 +43,6 @@ $(document).ready(function () {
         line = $(string.children('span'));
         initFontSize = parseInt(string.css('font-size'));
         ratio = width/line.width();
-
         returnFontSize = initFontSize*ratio;
 
         if (set_max_size && returnFontSize > initFontSize) {
@@ -52,8 +62,7 @@ $(document).ready(function () {
           string.css('font-size', --returnFontSize);
         }
         string.html(line.html());
-      }
-
+      };
       // Call once to set.
       resizer();
 
@@ -78,20 +87,6 @@ $(document).ready(function () {
       })
     })
   };
-  //load in the data
-  loadData().then(data => {
-    teams = data.teams; // save teams
-    //loop teams
-    teams.forEach(function (team, tIndex) {
-      setTeamName(team, tIndex)
-      //loop players
-      team.players.forEach(function (player, pIndex) {
-        setPlayerName(tIndex, team, player, pIndex);
-      });
-    });
-  }).catch(error => {
-    console.log(error);
-  });
 
 
   let setTeamName = function(team, tIndex){
@@ -117,11 +112,22 @@ $(document).ready(function () {
     $('.back').removeClass('true false').addClass('c-bkg');
     cCards.forEach(function(card, index) {
       console.log(card);
-        $('#card-'+index +' .inner').html(card.fact);
+        $('#card-'+index +' .inner').html(card.fact); //add fact to card
     });
   };
+
+  let introMusic = function() {
+    console.log('Starting Music Timer');
+    setTimeout(function () {
+      //do something once
+      console.log('Timer Up Playing Intro Music');
+      //howl.play('intromusic');
+    }, 5000);
+  };
+
   $('.header-row').click(function(){
-    $('.gc').addClass('gamecard-hover');
+    //$('.gc').addClass('gamecard-hover');
+    //introMusic();
   });
 
   $('#game-details').on('click', '.player', function(){
@@ -136,17 +142,18 @@ $(document).ready(function () {
     setCurrentPlayer(cPlayer);
     $('.player').removeClass('active');
     $(this).addClass('active')
-    .addClass('active')
     .data("player", cPlayer) // sets player data
     .data("cards", cCards) // sets card data
     .data("team", cTeam); // sets team data
     clearTeamChoices();
     clearAudChoices();
     buildCards();
+
   });
 
+
   $('.gamecard').click(function(){
-    $(this).addClass('gamecard-hover');
+    $(this).addClass('gamecard-hover').find('.back');
   });
   
   $('#current-player').click(function(){
@@ -154,17 +161,59 @@ $(document).ready(function () {
       let avote = $('.avote').data('vote');
       let tvote = $('.tvote').data('vote');
       let answer = getTruth(cCards);
-      console.log({'answer': answer});
+      //console.log({'answer': answer});
       setCardResults();
+      if(checkData(cCards[answer], "aaudio")){
+
+      }
       setVoteResult('avote','.avote', avote, answer);
       setVoteResult('tvote','.tvote', tvote, answer);
+
   });
-  
+
+  let checkData = function(data, el) {
+    if (data.hasOwnProperty(el)) {
+      return data.el !== "";
+    }
+    return false;
+  };
+
+  let setImage = function(card){
+    if(checkData(card, 'aimage')){
+      //set modal image
+      console.log("setting src");
+      $('#ImageModal').css('background-image', 'url(' + card.aimage + ')').modal('show');
+      // open modal
+      console.log("opening modal");
+    }
+  };
+  let setAudio = function(audiofile){
+      console.log("setting Audio");
+      howl = new Howl({src: ['/assets/sounds/'+audiofile], html5: false, autoplay: false, volume : 0.3});
+      howl.on('play', function(id) {
+        console.log('played:', id);
+        soundActive = true;
+      });
+      howl.on('end', function(id) {
+        console.log('ended:', id);
+        soundActive = false;
+      });
+      howl.on('stop', function(id) {
+        console.log('stopped:', id);
+        soundActive = false;
+      });
+      howl.play();
+      console.log("audio set");
+  };
   let setCardResults = function(){
       cCards.forEach(function(card, index){
         if(card.truth === true){
           $('#card-' + index).addClass('true').removeClass('c-bkg');
-
+          setImage(card);
+          console.log("calling set audio");
+          if(checkData(card, 'aaudio')){
+            setAudio(card.aaudio);
+          }
         }else{
           $('#card-' + index).addClass('false').removeClass('c-bkg');
         } 
@@ -205,6 +254,7 @@ $(document).ready(function () {
     $(this).addClass('avote');
   });
 
+
   $('.minus').click(function () {
     var $input = $(this).parent().find('input');
     var count = parseInt($input.val()) - 1;
@@ -218,21 +268,64 @@ $(document).ready(function () {
     $input.change();
     return false;
   });
-  $('.load-lies').click(function () {
+
+  $('#ImageModal').on('click', function(e){
+    console.log("modal Clicked");
+    if(soundActive){
+      howl.fade(0.5,0, 1000);
+    }
+    if(showSection){
+      setAudio('intromusic2.mp3');
+      showSection = false;
+    }
+  });
+  $('#start').on('click', function(e){
+    //load in the data
     loadData().then(data => {
-      console.log({"data" : data});
       teams = data.teams; // save teams
       //loop teams
       teams.forEach(function (team, tIndex) {
-        setTeamName(team, tIndex);
+        setTeamName(team, tIndex)
         //loop players
         team.players.forEach(function (player, pIndex) {
           setPlayerName(tIndex, team, player, pIndex);
         });
       });
-      console.log({"teams": teams});
+      //$('#ImageModal').css('background-image', 'url(' + 'assets/img/app-screen-start.jpg' + ')').modal('show');
     }).catch(error => {
       console.log(error);
     });
   });
+
+  $('#t0-name').on('click', function(e){
+    showSection = true;
+    $('#ImageModal').css('background-image', 'url(' + 'assets/img/app-screen-start.jpg' + ')').modal('show');
+  });
+
+  $('#aud-name').on('click', function(e){
+    showSection = true;
+    $('#ImageModal').css('background-image', 'url(' + 'assets/img/app-screen-interval.jpg' + ')').modal('show');
+  });
+
+  $('#t1-name').on('click', function(e){
+    showSection = false;
+    $('#ImageModal').css('background-image', 'url(' + 'assets/img/app-screen-end.jpg' + ')').modal('show');
+  })
+  // $('.load-lies').click(function () {
+  //   loadData().then(data => {
+  //     console.log({"data" : data});
+  //     teams = data.teams; // save teams
+  //     //loop teams
+  //     teams.forEach(function (team, tIndex) {
+  //       setTeamName(team, tIndex);
+  //       //loop players
+  //       team.players.forEach(function (player, pIndex) {
+  //         setPlayerName(tIndex, team, player, pIndex);
+  //       });
+  //     });
+  //     console.log({"teams": teams});
+  //   }).catch(error => {
+  //     console.log(error);
+  //   });
+  // });
 });
