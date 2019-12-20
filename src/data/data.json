@@ -7,50 +7,51 @@
                     "name": "Dayne Brasher",
                     "captain": true,
                     "cards": [
-
                         {
-                            "fact": "I ruined a family holiday because I smuggled an animal with me",
+                            "fact": "I puked all over someone because they laughed at me",
                             "truth": false,
                             "teamvote": false,
                             "audvote": false
                         },
                         {
-                            "fact": "A famous musician wrote a song about my mother after meeting her in a bar.",
+                            "fact": "I once found an ancient mysterious relic that the australian government stole off me",
                             "truth": false,
                             "teamvote": false,
                             "audvote": false
                         },
                         {
-                            "fact": "A bird has shat on my sandwich 3 times.",
+                            "fact": "I saved someone from drowning",
                             "truth": true,
                             "teamvote": false,
                             "audvote": false,
-                            "aimage": "assets/img/bird-poo.jpg",
-                            "aaudio": "seagull.mp3"
+                            "aimage": "assets/img/drowning-dayne.jpg",
+                            "aaudio": "drowning.mp3"
                         }
                     ]
                 },
                 {
-                    "name": "Gino Christofaro",
+                    "name": "Lena Stolby",
                     "captain": false,
                     "cards": [
                         {
-                            "fact": "I have a scam that has made me over $2,000 since i started using it",
+                            "fact": "The only name i was called for 5 years, was Громкий ребенок",
                             "truth": false,
                             "teamvote": false,
                             "audvote": false
                         },{
-                            "fact": "I once stole a mobility scooter off a disabled girl",
-                            "truth": true,
-                            "teamvote": false,
-                            "audvote": false,
-                            "aimage": "assets/img/mobillity.png"
-                        },
-                        {
-                            "fact": "I am banned from 48 different casino's",
+                            "fact": "I was asked to leave an apartment because my Singing in the Shower was too Loud",
                             "truth": false,
                             "teamvote": false,
                             "audvote": false
+
+                        },
+                        {
+                            "fact": "I was tricked into drinking piss",
+                            "truth": true,
+                            "teamvote": false,
+                            "audvote": false,
+                            "aimage": "assets/img/pissbottle.jpg",
+                            "aaudio": "water-pour.mp3"
                         }
 
                     ]
@@ -61,51 +62,51 @@
             "name": "Team Two",
             "players": [
                 {
-                    "name": "Scott Reynolds",
+                    "name": "Pavlo Voytovych",
                     "color": "warning",
                     "captain": true,
                     "cards": [
                         {
-                            "fact": "When i was little, growing up, I wanted to be a __________",
+                            "fact": "I received death threats for 6 months, for a joke I told.",
                             "truth": false,
                             "teamvote": false,
                             "audvote": false
                         },
                         {
-                            "fact": "I got lost and couldn't get home for __________ days",
-                            "truth": false,
-                            "teamvote": false,
-                            "audvote": false
-                        },
-                        {
-                            "fact": "I auditioned to be the __________ in a Beatles cover band",
+                            "fact": "I was mugged and all they took were my shoes",
                             "truth": true,
                             "teamvote": false,
                             "audvote": false,
-                            "aaudio" : "a-hard-days-night-short.mp3",
-                            "aimage": "assets/img/john-lennon-1.jpg"
+                            "aimage": "assets/img/stolen-shoes.jpg",
+                            "aaudio": "footsteps.mp3"
+                        },
+                        {
+                            "fact": "I have studied the female body language",
+                            "truth": false,
+                            "teamvote": false,
+                            "audvote": false
                         }
                     ]
                 },
                 {
-                    "name": "Tera Kilbride",
-                    "captain": false,
+                    "name": "David Adams",
                     "cards": [
                         {
-                            "fact": "Two of my family had to go to hospital after a thanksgiving dinner I organised",
+                            "fact": "I once broke up a bar fight in Harlem NY",
+                            "truth": true,
+                            "teamvote": false,
+                            "audvote": false,
+                            "aimage": "assets/img/bar-fight.jpg",
+                            "aaudio": "bar-fight.mp3"
+                        },
+                        {
+                            "fact": "I have decided to shave my beard off at the end of the year",
                             "truth": false,
                             "teamvote": false,
                             "audvote": false
                         },
                         {
-                            "fact": "I used to dress up as a GingerBread man",
-                            "truth": true,
-                            "teamvote": false,
-                            "audvote": false,
-                            "aimage": "assets/img/gingerbread-man-running-clipart.png"
-                        },
-                        {
-                            "fact": "I have a secret obsession with RollerCoasters",
+                            "fact": "I have danced naked on a table, 3 different times",
                             "truth": false,
                             "teamvote": false,
                             "audvote": false

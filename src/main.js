@@ -148,9 +148,7 @@ $(document).ready(function () {
     clearTeamChoices();
     clearAudChoices();
     buildCards();
-
   });
-
 
   $('.gamecard').click(function(){
     $(this).addClass('gamecard-hover').find('.back');
@@ -162,13 +160,11 @@ $(document).ready(function () {
       let tvote = $('.tvote').data('vote');
       let answer = getTruth(cCards);
       //console.log({'answer': answer});
+      showSection = false;
       setCardResults();
-      if(checkData(cCards[answer], "aaudio")){
 
-      }
       setVoteResult('avote','.avote', avote, answer);
       setVoteResult('tvote','.tvote', tvote, answer);
-
   });
 
   let checkData = function(data, el) {
@@ -187,9 +183,10 @@ $(document).ready(function () {
       console.log("opening modal");
     }
   };
+
   let setAudio = function(audiofile){
       console.log("setting Audio");
-      howl = new Howl({src: ['/assets/sounds/'+audiofile], html5: false, autoplay: false, volume : 0.3});
+      howl = new Howl({src: ['/assets/sounds/'+audiofile], html5: true, autoplay: false, volume : 0.3, preload: true, pool: 1});
       howl.on('play', function(id) {
         console.log('played:', id);
         soundActive = true;
@@ -197,9 +194,11 @@ $(document).ready(function () {
       howl.on('end', function(id) {
         console.log('ended:', id);
         soundActive = false;
+        $('#ImageModal').modal('hide');
       });
       howl.on('stop', function(id) {
         console.log('stopped:', id);
+        $('#ImageModal').modal('hide');
         soundActive = false;
       });
       howl.play();
@@ -219,6 +218,7 @@ $(document).ready(function () {
         } 
       })
   };
+
   let setVoteResult = function(type, selector, vote, answer){
     console.log({'type': type, 'selector': selector, 'vote': vote, 'answer': answer });
     
@@ -254,7 +254,6 @@ $(document).ready(function () {
     $(this).addClass('avote');
   });
 
-
   $('.minus').click(function () {
     var $input = $(this).parent().find('input');
     var count = parseInt($input.val()) - 1;
@@ -276,11 +275,21 @@ $(document).ready(function () {
     }
     if(showSection){
       setAudio('intromusic2.mp3');
+    }
+  }).on('hide.bs.modal', function(e) {
+    if(showSection){
+      e.preventDefault();
       showSection = false;
     }
   });
+
   $('#start').on('click', function(e){
+    $('#t0-players').html("");
+    $('#t1-players').html("");
+
+    $('.played').removeClass('played');
     //load in the data
+
     loadData().then(data => {
       teams = data.teams; // save teams
       //loop teams
