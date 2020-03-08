@@ -1,5 +1,15 @@
-<h2 align="center">gulp-sass-bootstrap-boilerplate</h2>
+<h2 align="center">Truth and Lies Display Application - built on gulp-sass-bootstrap-boilerplate</h2>
+<p align="center">
+This is a display application for the Truth and Lies show.
+It displays truths and lies.
 
+Todo: 
+Add abillity to Save Load and edit the JSON within the App.
+Add diffirent layouts - scores and names displayed on top bottom left and right
+
+Eventually i want to rewrite this using Vue JS
+
+</p>
 <p align="center">
   <a href="https://travis-ci.org/abhijithvijayan/gulp-sass-bootstrap-boilerplate">
     <img alt="travis" src="https://travis-ci.org/abhijithvijayan/gulp-sass-bootstrap-boilerplate.svg?branch=master"></a>

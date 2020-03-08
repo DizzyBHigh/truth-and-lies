@@ -16,6 +16,8 @@ $(document).ready(function () {
     console.log('assets/img/paper-'+currentPaper+'.jpg');
     return('assets/img/paper-'+currentPaper+'.jpg');
   };
+
+
   $.fn.equalHeights = function(){
     var max_height = 0;
     $(this).each(function(){
@@ -25,7 +27,6 @@ $(document).ready(function () {
       $(this).height(max_height);
     });
   };
-
   $.fn.adjustTextSize = function (set_max_size, min_size) {
     min_size = min_size || 12; // if no value then set a default one
     var string, width, line, initFontSize, returnFontSize, ratio;
@@ -71,6 +72,20 @@ $(document).ready(function () {
     });
   };
 
+  /**
+   * Shuffles array in place.
+   * @param {Array} a items An array containing the items.
+   */
+  function shuffle(a) {
+    var j, x, i;
+    for (i = a.length - 1; i > 0; i--) {
+      j = Math.floor(Math.random() * (i + 1));
+      x = a[i];
+      a[i] = a[j];
+      a[j] = x;
+    }
+    return a;
+  }
 
   let loadData = function () {
     return new Promise((resolve, reject) => {
@@ -110,9 +125,10 @@ $(document).ready(function () {
   let buildCards = function () {
     console.log('building cards');
     $('.back').removeClass('true false').addClass('c-bkg');
-    cCards.forEach(function(card, index) {
+    cCards = shuffle(cCards);
+    cCards.forEach(function (card, index) {
       console.log(card);
-        $('#card-'+index +' .inner').html(card.fact); //add fact to card
+      $('#card-' + index + ' .inner').html(card.fact); //add fact to card
     });
   };
 
@@ -166,7 +182,6 @@ $(document).ready(function () {
       setVoteResult('avote','.avote', avote, answer);
       setVoteResult('tvote','.tvote', tvote, answer);
   });
-
   let checkData = function(data, el) {
     if (data.hasOwnProperty(el)) {
       return data.el !== "";
@@ -178,19 +193,26 @@ $(document).ready(function () {
     if(checkData(card, 'aimage')){
       //set modal image
       console.log("setting src");
-      $('#ImageModal').css('background-image', 'url(' + card.aimage + ')').modal('show');
+      $('#ImageModal').css('background-image', 'url(assets/img/' + card.aimage + ')').modal('show');
       // open modal
       console.log("opening modal");
     }
   };
 
   let setAudio = function(audiofile){
-      console.log("setting Audio");
-      howl = new Howl({src: ['/assets/sounds/'+audiofile], html5: true, autoplay: false, volume : 0.3, preload: true, pool: 1});
-      howl.on('play', function(id) {
-        console.log('played:', id);
-        soundActive = true;
-      });
+    console.log("setting Audio");
+    howl = new Howl({
+      src: ['/assets/sounds/' + audiofile],
+      html5: true,
+      autoplay: false,
+      volume: 1.0,
+      preload: true,
+      pool: 1
+    });
+    howl.on('play', function (id) {
+      console.log('played:', id);
+      soundActive = true;
+    });
       howl.on('end', function(id) {
         console.log('ended:', id);
         soundActive = false;
@@ -200,6 +222,7 @@ $(document).ready(function () {
         console.log('stopped:', id);
         $('#ImageModal').modal('hide');
         soundActive = false;
+
       });
       howl.play();
       console.log("audio set");
@@ -218,6 +241,7 @@ $(document).ready(function () {
         } 
       })
   };
+
 
   let setVoteResult = function(type, selector, vote, answer){
     console.log({'type': type, 'selector': selector, 'vote': vote, 'answer': answer });
@@ -274,15 +298,14 @@ $(document).ready(function () {
       howl.fade(0.5,0, 1000);
     }
     if(showSection){
-      setAudio('intromusic2.mp3');
+      //setAudio('intromusic2.mp3');
     }
   }).on('hide.bs.modal', function(e) {
     if(showSection){
-      e.preventDefault();
+      //e.preventDefault();
       showSection = false;
     }
   });
-
   $('#start').on('click', function(e){
     $('#t0-players').html("");
     $('#t1-players').html("");
@@ -294,7 +317,7 @@ $(document).ready(function () {
       teams = data.teams; // save teams
       //loop teams
       teams.forEach(function (team, tIndex) {
-        setTeamName(team, tIndex)
+        setTeamName(team, tIndex);
         //loop players
         team.players.forEach(function (player, pIndex) {
           setPlayerName(tIndex, team, player, pIndex);
@@ -307,19 +330,40 @@ $(document).ready(function () {
   });
 
   $('#t0-name').on('click', function(e){
-    showSection = true;
+    showSection = false;
     $('#ImageModal').css('background-image', 'url(' + 'assets/img/app-screen-start.jpg' + ')').modal('show');
   });
 
-  $('#aud-name').on('click', function(e){
-    showSection = true;
+
+  $('#aud-name').on('click', function (e) {
+    showSection = false;
     $('#ImageModal').css('background-image', 'url(' + 'assets/img/app-screen-interval.jpg' + ')').modal('show');
   });
 
-  $('#t1-name').on('click', function(e){
+  $('#t1-name').on('click', function (e) {
     showSection = false;
     $('#ImageModal').css('background-image', 'url(' + 'assets/img/app-screen-end.jpg' + ')').modal('show');
   })
+
+  function shuffleCards(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+
+    return array;
+  }
+
   // $('.load-lies').click(function () {
   //   loadData().then(data => {
   //     console.log({"data" : data});

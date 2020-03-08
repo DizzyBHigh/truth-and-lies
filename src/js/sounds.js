@@ -59,12 +59,20 @@ let sounds = {
         src: ['assets/sounds/a-hard-days-night-short.mp3'],
         volume: 1.0,
     }),
-    'play': function(sound = 'smsBeep'){
-        console.log("Playing: "+sound);
+    'beatle': new Howl({
+        src: ['assets/sounds/a-hard-days-night-short.mp3'],
+        volume: 1.0,
+    }),
+    'san-pedro': new Howl({
+        src: ['assets/sounds/madonna-san-pedro.mp3'],
+        volume: 1.0,
+    }),
+    'play': function (sound = 'smsBeep') {
+        console.log("Playing: " + sound);
         sounds[sound].play();
     },
-    'playSprite': function(sound = 'bell', sprite = 'bell'){
-        console.log("Playing Sprite: "+sound+' - '+sprite);
+    'playSprite': function (sound = 'bell', sprite = 'bell') {
+        console.log("Playing Sprite: " + sound + ' - ' + sprite);
         sounds[sound].play(sprite);
     },
 };

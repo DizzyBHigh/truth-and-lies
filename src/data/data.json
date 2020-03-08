@@ -4,54 +4,50 @@
             "name": "Team One",
             "players": [
                 {
-                    "name": "Dayne Brasher",
+                    "name": "Kate Cheka",
                     "captain": true,
                     "cards": [
                         {
-                            "fact": "I puked all over someone because they laughed at me",
-                            "truth": false,
-                            "teamvote": false,
-                            "audvote": false
-                        },
-                        {
-                            "fact": "I once found an ancient mysterious relic that the australian government stole off me",
-                            "truth": false,
-                            "teamvote": false,
-                            "audvote": false
-                        },
-                        {
-                            "fact": "I saved someone from drowning",
+                            "fact": "One time a helicopter was sent out to look for me cos I left the lyrics to a song lying on my bed",
                             "truth": true,
                             "teamvote": false,
-                            "audvote": false,
-                            "aimage": "assets/img/drowning-dayne.jpg",
-                            "aaudio": "drowning.mp3"
+                            "audvote": false
+                        },
+                        {
+                            "fact": "One time I was fired from work cos I left the lyrics to a song on my managers desk",
+                            "truth": false,
+                            "teamvote": false,
+                            "audvote": false
+                        },
+                        {
+                            "fact": "One time I had to buy a £350 Jacket cos I left the lyrics to a song in the pocket",
+                            "truth": false,
+                            "teamvote": false,
+                            "audvote": false
                         }
                     ]
                 },
                 {
-                    "name": "Lena Stolby",
+                    "name": "Dayne Brasher",
                     "captain": false,
                     "cards": [
                         {
-                            "fact": "The only name i was called for 5 years, was Громкий ребенок",
+                            "fact": "I once sprained my ankle on purpose so I didn't have to go to school",
                             "truth": false,
                             "teamvote": false,
                             "audvote": false
-                        },{
-                            "fact": "I was asked to leave an apartment because my Singing in the Shower was too Loud",
-                            "truth": false,
-                            "teamvote": false,
-                            "audvote": false
-
                         },
                         {
-                            "fact": "I was tricked into drinking piss",
+                            "fact": "I used to deliberately surf into jagged rocks",
                             "truth": true,
                             "teamvote": false,
-                            "audvote": false,
-                            "aimage": "assets/img/pissbottle.jpg",
-                            "aaudio": "water-pour.mp3"
+                            "audvote": false
+                        },
+                        {
+                            "fact": "I Once made a 1 metre high model of the Sydney Opera House out of matchsticks, which later burnt down during a new years eve party",
+                            "truth": false,
+                            "teamvote": false,
+                            "audvote": false
                         }
 
                     ]
@@ -62,51 +58,48 @@
             "name": "Team Two",
             "players": [
                 {
-                    "name": "Pavlo Voytovych",
+                    "name": "Ankur Midha",
                     "color": "warning",
                     "captain": true,
                     "cards": [
                         {
-                            "fact": "I received death threats for 6 months, for a joke I told.",
+                            "fact": "I used to sell doorbell's that 'Rang' using random lines from films",
                             "truth": false,
                             "teamvote": false,
                             "audvote": false
                         },
                         {
-                            "fact": "I was mugged and all they took were my shoes",
-                            "truth": true,
+                            "fact": "I was rescued from a lift that malfunctioned causing it to fall 15 floors",
+                            "truth": false,
                             "teamvote": false,
-                            "audvote": false,
-                            "aimage": "assets/img/stolen-shoes.jpg",
-                            "aaudio": "footsteps.mp3"
+                            "audvote": false
                         },
                         {
-                            "fact": "I have studied the female body language",
-                            "truth": false,
+                            "fact": "I once had to wear a nappy to a new year's eve party",
+                            "truth": true,
                             "teamvote": false,
                             "audvote": false
                         }
                     ]
                 },
                 {
-                    "name": "David Adams",
+                    "name": "Kat Nip",
+                    "captain": false,
                     "cards": [
                         {
-                            "fact": "I once broke up a bar fight in Harlem NY",
-                            "truth": true,
-                            "teamvote": false,
-                            "audvote": false,
-                            "aimage": "assets/img/bar-fight.jpg",
-                            "aaudio": "bar-fight.mp3"
-                        },
-                        {
-                            "fact": "I have decided to shave my beard off at the end of the year",
+                            "fact": "I worked in a shop that only sold Ice Cream made from women's breast milk",
                             "truth": false,
                             "teamvote": false,
                             "audvote": false
                         },
                         {
-                            "fact": "I have danced naked on a table, 3 different times",
+                            "fact": "I have played a truth and lies game at an assessment day to be a playboy Bunny",
+                            "truth": true,
+                            "teamvote": false,
+                            "audvote": false
+                        },
+                        {
+                            "fact": "I have spent 8 hours, non-stop, on a swing to promote a swinging 60's album",
                             "truth": false,
                             "teamvote": false,
                             "audvote": false
